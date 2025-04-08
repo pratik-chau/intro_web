@@ -701,7 +701,7 @@ section{
         position: fixed;
         background-color: #3a6cf4;
         top: 0;
-        right: 0;
+        right: 30px;
         width: 380px;
         height: 100%;
         display: flex;
@@ -734,14 +734,14 @@ section{
         background-repeat: no-repeat;
         width: 40px;
         height: 40px;
-        right: 0;
+        right: 20px;
         margin: 0 20px;
         cursor: pointer;
-        transition: 0.3s ease;
+        transition: 0.3s ease-in-out;
     }
 
     .menu-btn.active{
-        z-index: 999;
+        z-index: 1;
         background-image: url(Image/close.svg);
         background-repeat: no-repeat;
         background-position: center;
