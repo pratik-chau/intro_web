@@ -6,6 +6,7 @@
   <title>404 - Page Not Found</title>
   <link rel="icon" type="image/x-icon" href="Image/favicon.ico">
   <style>
+    @import url("https://fonts.googleapis.com/css?family=Syne:600,800");
     body {
       margin: 0;
       padding: 0;
@@ -181,9 +182,34 @@
       0%, 100% { opacity: 0.2; }
       50% { opacity: 0.8; }
     }
+    header{
+    z-index: 889;
+    position: fixed;
+    background-color: rgba(255,255,255,0.1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s ease;
+    }
+    header .brand, header .brand span{
+    font-family: Syne;
+    color: gold;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
   </style>
 </head>
 <body>
+  <header>
+    <a href="https://prateekchaulagain.com.np/" class="brand" data-aos="zoom-in" data-aos-duration="1000"><span>Prateek</span></a>
+    <div class="menu-btn"></div>
+</header>
   <div class="stars" id="stars"></div>
   
   <div class="container">
