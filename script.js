@@ -96,3 +96,78 @@ document.addEventListener('DOMContentLoaded', function() {
             mybutton.addEventListener("click", function() {
                 window.scrollTo({ top: 0, behavior: "smooth" });
             });
+
+            // Carousel Functionality with Debugging
+document.addEventListener('DOMContentLoaded', () => {
+  // Select DOM elements
+  const cards = document.querySelectorAll('.carousel-items .card');
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
+  const currentIndicator = document.querySelector('.gallery-indicator .current');
+  const totalIndicator = document.querySelector('.gallery-indicator .total');
+  const carouselItems = document.querySelector('.carousel-items');
+
+  // Debugging: Log selected elements
+  console.log('Cards:', cards);
+  console.log('Left Arrow:', leftArrow);
+  console.log('Right Arrow:', rightArrow);
+  console.log('Current Indicator:', currentIndicator);
+  console.log('Total Indicator:', totalIndicator);
+  console.log('Carousel Items Container:', carouselItems);
+
+  // Check if elements are found
+  if (!cards.length || !leftArrow || !rightArrow || !currentIndicator || !totalIndicator || !carouselItems) {
+      console.error('One or more DOM elements not found. Check selectors and HTML structure.');
+      return;
+  }
+
+  let currentIndex = 0;
+  const totalImages = cards.length;
+
+  // Set total number of images
+  totalIndicator.textContent = totalImages;
+  console.log('Total Images:', totalImages);
+
+  // Update carousel display
+  const updateCarousel = () => {
+      // Remove .active class from all cards
+      cards.forEach((card) => {
+          card.classList.remove('active');
+          console.log('Removed active class from card:', card);
+      });
+
+      // Add .active class to the current card
+      cards[currentIndex].classList.add('active');
+      console.log(`Added active class to card ${currentIndex}`);
+
+      // Update the gallery indicator
+      currentIndicator.textContent = currentIndex + 1;
+      console.log('Current Index:', currentIndex);
+  };
+
+  // Navigate to the previous image
+  const goToPrevious = () => {
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      console.log('Navigating to previous, new index:', currentIndex);
+      updateCarousel();
+  };
+
+  // Navigate to the next image
+  const goToNext = () => {
+      currentIndex = (currentIndex + 1) % totalImages;
+      console.log('Navigating to next, new index:', currentIndex);
+      updateCarousel();
+  };
+
+  // Add event listeners for navigation
+  leftArrow.addEventListener('click', goToPrevious);
+  rightArrow.addEventListener('click', goToNext);
+
+  // Prevent default behavior on image clicks to stop disappearing
+  carouselItems.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log('Click on carousel item prevented');
+  });
+  // Initial display
+  updateCarousel();
+});
