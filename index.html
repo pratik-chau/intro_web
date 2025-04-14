@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="KUyLt1q_NVH_QLsRS-Oc1szHx5HbonI27RjWMBZkApY" />
     <title>PRATEEK</title>
     <link rel="icon" type="image/x-icon" href="Image/favicon.ico">
     <link rel="stylesheet" href="style.css">
@@ -34,6 +35,7 @@
                 <h3>UI/UX Designer</h3>
                 <h3>Engineer (to be)</h3>
             </div>
+            
             <br><br>
             <div class="animated-text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
             <div class="buymeacoffee"><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" href="buymeacoffee.com/pratik.chau" data-name="bmc-button" data-slug="pratik.chau" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script></a>
@@ -171,44 +173,61 @@
     </section>
 
 <!-- Work Section -->
-    <section class="work" id="work">
-        <div class="title">
-            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Works</h2>
+<section class="work" id="work">
+    <div class="title">
+        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Works</h2>
+    </div>
+    <div class="content">
+        <div class="carousel">
+            <!-- Navigation Arrows -->
+            <button class="arrow left-arrow" data-aos="fade-right" data-aos-duration="1000">❮</button>
+            
+            <!-- Carousel Items -->
+            <div class="carousel-items">
+                <div class="card active" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card-img">
+                        <img src="Image/work4.png" alt="Work 1">
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card-img">
+                        <img src="Image/work5.png" alt="Work 2">
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card-img">
+                        <img src="Image/work6.jpg" alt="Work 3">
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card-img">
+                        <img src="Image/work4.png" alt="Work 4">
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card-img">
+                        <img src="Image/work5.png" alt="Work 5">
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="card-img">
+                        <img src="Image/work6.jpg" alt="Work 6">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Navigation Arrow -->
+            <button class="arrow right-arrow" data-aos="fade-left" data-aos-duration="1000">❯</button>
         </div>
-        <div class="content">
-            <!-- <div class="card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                <div class="card-img">
-                    <img src="Image/work1.png" alt="">
-                </div>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <div class="card-img">
-                    <img src="Image/work2.png" alt="">
-                </div>
-            </div>
-            <div class="card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                <div class="card-img">
-                    <img src="Image/work3.png" alt="">
-                </div>
-            </div> -->
-            <div class="card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
-                <div class="card-img">
-                    <img src="Image/work4.png" alt="">
-                </div>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                <div class="card-img">
-                    <img src="Image/work5.png" alt="">
-                </div>
-            </div>
-            <div class="card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-                <div class="card-img">
-                    <img src="Image/work6.jpg" alt="">
-                </div>
-            </div>
-            <a href="index3.html" class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">Icon Logos -></a>
+        
+        <!-- Gallery Indicator -->
+        <div class="gallery-indicator" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <span class="current"></span> of <span class="total"></span>
         </div>
-    </section>
+        
+        <a href="index3.html"class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">Expand -></a>
+    </div>
+</section>
     <section class="contact" id="contact">
         <div class="title reveal">
             <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Connections</h2>
@@ -235,7 +254,7 @@
             </div>
             <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
               <div class="contact-icon">
-                <i  class="i" data-feather="mail" stroke="#0055FF"></i>
+                <i  class="i" data-feather="mail"></i>
               </div>
               <div class="info">
                 <h3>Email Address</h3>
@@ -294,31 +313,30 @@
 <script type="module">
     AOS.init({ offset: 0 });
 
-    const scrollBtn = document.querySelector(".scroll-btn");
-    if (scrollBtn) {
-        window.addEventListener("scroll", function () {
-            scrollBtn.classList.toggle("active");
-  });
-}
-
-    const menuBtn = document.querySelector(".menu-btn");
-    const navigation = document.querySelector(".navigation");
-    menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active");
-    navigation.classList.toggle("active");
-    });
-
+    
     // Sticky header on scroll
     window.addEventListener("scroll", function () {
-    const header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 100);
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 100);
     });
+//     const scrollBtn = document.querySelector(".scroll-btn");
+//     if (scrollBtn) {
+//         window.addEventListener("scroll", function () {
+//             scrollBtn.classList.toggle("active");
+//   });
+// }
 
-    const navigationItems = document.querySelectorAll(".navigation a");
-    navigationItems.forEach((navigationItem) => {
-    navigationItem.addEventListener("click", () => {
-        menuBtn.classList.remove("active");
-        navigation.classList.remove("active");
-  });
-});
+//     const menuBtn = document.querySelector(".menu-btn");
+//     const navigation = document.querySelector(".navigation");
+//     menuBtn.addEventListener("click", () => {
+//     menuBtn.classList.toggle("active");
+//     navigation.classList.toggle("active");
+//     });
+//     const navigationItems = document.querySelectorAll(".navigation a");
+//     navigationItems.forEach((navigationItem) => {
+//     navigationItem.addEventListener("click", () => {
+//         menuBtn.classList.remove("active");
+//         navigation.classList.remove("active");
+//   });
+// });
 </script>
