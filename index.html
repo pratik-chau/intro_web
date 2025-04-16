@@ -13,7 +13,7 @@
     <script src="script.js" type="module"></script>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <a href="" class="brand" data-aos="zoom-in" data-aos-duration="1000"><span>Prateek</span></a>
         <div class="menu-btn"></div>
         <div class="navigation">
@@ -24,8 +24,24 @@
             <a href="myprojects.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Projects</a>
             <a href="#contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact</a>
         </div>
-    </header>
+    </header> -->
 
+    <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <span><a href="https://prateekchaulagain.com.np/">PRATEEK</a></span>
+            </div>
+            <div class="navbar-menu">
+                <ul class="navbar-links">
+                    <li><a href="#main" title="Home"><i class="fas fa-home"></i></a></li>
+                    <li><a href="#about" title="About"><i class="fas fa-user"></i></a></li>
+                    <li><a href="myprojects.html" title="Blog"><i class="fas fa-blog"></i></a></li>
+                    <li><a href="myprojects.html" title="Projects"><i class="fas fa-code"></i></a></li>
+                    <li><a href="#contact" title="Contact"><i class="fas fa-envelope"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <section class="main" id="main">
         <div class="content">
             <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">Namaste, I'm <br><span>Prateek </span><span class="chau">Chaulagain</span></h2>
@@ -90,35 +106,35 @@
                 <div class="bar">
                     <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100">
                         <span><img src="Image/icon_assets/adobelightroom-svgrepo-com.png"></span>
-                        <span>80%</span>
+                        <span>3 yrs+</span>
                     </div>
                     <div class="line lightroom" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="140"></div>
                 </div>
                 <div class="bar">
                     <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
                         <span><img src="Image/icon_assets/figma-svgrepo-com.png"></span>
-                        <span>75%</span>
+                        <span>2 yrs+</span>
                     </div>
                     <div class="line figma" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="240"></div>
                 </div>
                 <div class="bar">
                     <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="300">
                         <span><img src="Image/icon_assets/framer-svgrepo-com.png"></span>
-                        <span>40%</span>
+                        <span><1 yr</span>
                     </div>
                     <div class="line framer" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="340"></div>
                 </div>
                 <div class="bar">
                     <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">
                         <span><img src="Image/icon_assets/adobe-illustrator-svgrepo-com.png"></span>
-                        <span>20%</span>
+                        <span><1 yr</span>
                     </div>
                     <div class="line illustrator" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440"></div>
                 </div>
                 <div class="bar">
                     <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="500">
                         <span><img src="Image/icon_assets/phase-svgrepo-com.png"></span>
-                        <span>04%</span>
+                        <span><1 yr</span>
                     </div>
                     <div class="line phase" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="540"></div>
                 </div>
@@ -316,6 +332,17 @@
         const header = document.querySelector("header");
         header.classList.toggle("sticky", window.scrollY > 100);
     });
+
+        // Add scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').style.padding = '10px 0';
+                document.querySelector('.navbar').style.background = 'rgba(6, 114, 202, 0.95)';
+            } else {
+                document.querySelector('.navbar').style.padding = '15px 0';
+                document.querySelector('.navbar').style.background = 'rgba(6, 114, 202, 0)';
+            }
+        });
 //     const scrollBtn = document.querySelector(".scroll-btn");
 //     if (scrollBtn) {
 //         window.addEventListener("scroll", function () {
