@@ -4,9 +4,16 @@
 :root{
     --royalblue: #0672ca;
     --accentgold: #fddd25;
+    --accent-color: #fddd25;
     --partwhite: #ffffff;
     --boldblack: #111;
-
+    --primary-dark: #045a9e;
+    --accent-dark: #e6c700;
+    --white: #ffffff;
+    --light-gray: #f5f7fa;
+    --mid-gray: #e9ecef;
+    --dark-gray: #495057;
+    --black: #212529;
 }
 *{
     padding: 0;
@@ -21,7 +28,7 @@ body{
     overflow-x: hidden;
 }
 
-header{
+/* header{
     z-index: 1;
     position: fixed;
     background-color: rgba(255,255,255,0.1);
@@ -53,9 +60,6 @@ header .brand, header .brand span{
 header .navigation{
     position: relative;
 }
-*:not(a){
-    cursor: grab;
-}
 header .navigation a{
     color: var(--partwhite);
     font-size: 1em;
@@ -70,8 +74,140 @@ header.sticky .navigation a{
 
 header .navigation a:hover, header.sticky .navigation a:hover{
     color: var(--accentgold);
+} */
+.navbar {
+    background: rgba(6, 114, 202, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand a {
+    font-family: Syne;
+    color: var(--accent-color);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand a:hover {
+    text-decoration: dotted 2px underline;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links li a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links li a i {
+    margin-right: 8px;
+}
+
+.navbar-links li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
+}
+
+.navbar-links li a.active {
+    background: var(--accent-color);
+    color: var(--primary-dark);
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+.navbar-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 80%;
+    height: calc(100vh - 70px);
+    background: rgba(6, 114, 202, 0.98);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+    padding: 20px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu.active {
+    left: 0;
+}
+
+.navbar-links {
+    flex-direction: column;
+}
+
+.navbar-links li {
+    margin: 15px 0;
+}
+
+.navbar-links li a {
+    padding: 12px;
+    margin: 0;
+}
+
+.navbar-toggle {
+    display: block;
+}
+
+.navbar-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+}
+*:not(a){
+    cursor: grab;
+}
 section{
     padding: 100px 200px;
 }
@@ -594,16 +730,16 @@ section{
 /* Mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
     .carousel {
-        max-width: 95%; /* Use almost full width on mobile */
+        max-width: 95%; 
         padding: 0 0.5rem;
     }
 
     .carousel-items {
-        height: 200px; /* Further reduce height for mobile */
+        height: 200px;
     }
 
     .work .section-title {
-        font-size: 1.5rem; /* Ensure title doesn’t get too small */
+        font-size: 1.5rem;
     }
 
     .arrow {
@@ -632,7 +768,7 @@ section{
 /* Very small devices (max-width: 320px) */
 @media (max-width: 320px) {
     .carousel-items {
-        height: 150px; /* Even smaller height for very small screens */
+        height: 150px;
     }
 
     .arrow {
@@ -643,7 +779,7 @@ section{
 
 /* Contact */
 .contact{
-    background-color: #f5f5f5ac;
+    background-color: white;
 }
 .contact .content{
     display: flex;
