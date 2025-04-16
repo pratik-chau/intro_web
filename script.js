@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
         
             function scrollFunction() {
-                if (document.documentElement.scrollTop > 20) {
+                if (document.documentElement.scrollTop > 500) {
                     mybutton.style.display = "block";
                 } else {
                     mybutton.style.display = "none";
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.scrollTo({ top: 0, behavior: "smooth" });
             });
 
-            // Carousel Functionality with Debugging
+// Carousel Functionality with Debugging
 document.addEventListener('DOMContentLoaded', () => {
   // Select DOM elements
   const cards = document.querySelectorAll('.carousel-items .card');
