@@ -22,6 +22,10 @@
     box-sizing: border-box;
 }
 
+body, html{
+    overflow-x: hidden;
+}
+
 body{
     width: 100%;
     height: auto;
@@ -221,10 +225,19 @@ section{
     font-size: 2em;
     font-weight: 100;
 }
+.main .content h4{
+    color: var(--partwhite);
+    font-size: 2em;
+    font-weight: 100;
+}
 
 .main .content h2 span{
     font-size: 2.8rem;
     font-weight: 700;
+}
+.main .content .context{
+    visibility: hidden;
+    /* display: none; */
 }
 
 .animated-text{
@@ -961,16 +974,32 @@ section{
     header .navigation{
         display: none;
     }
+
+    .navbar-brand a {
+        font-size: 2em;
+    }
+
+    .main .content .context{
+        visibility: visible;
+    }
+    .main .content .hr1{
+        display: none;
+    }
     
     .chau{
         text-decoration: wavy 1px solid underline;
     }
+
+    .buymeacoffee{
+        display: none;
+    }
     .media-icons{
         margin-top: 0px;
-        justify-content: space-between;
-        margin-bottom: 0px;
-        transform: translateY(260px);
+        padding: 30px;
         display: flex;
+        justify-content: space-between;
+        filter: drop-shadow(2px 3px 2px rgb(255, 0, 0));
+        transform: translateY(260px);
     }
 
     /* .navigation.active{
@@ -1045,6 +1074,11 @@ section{
         left: 0px;
     }
     .main .content h2{
+        font-size: 1em;
+        padding: 0 10px;
+        background-color: var(--main-color);
+    }
+    .main .content h4{
         font-size: 1em;
         padding: 0 10px;
         background-color: var(--main-color);
