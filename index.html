@@ -33,11 +33,11 @@
             </div>
             <div class="navbar-menu">
                 <ul class="navbar-links">
-                    <li><a href="#main" title="Home"><i class="fas fa-home"></i></a></li>
-                    <li><a href="#about" title="About"><i class="fas fa-user"></i></a></li>
-                    <li><a href="myprojects.html" title="Blog"><i class="fas fa-blog"></i></a></li>
-                    <li><a href="myprojects.html" title="Projects"><i class="fas fa-code"></i></a></li>
-                    <li><a href="#contact" title="Contact"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="#main" title="Home"  data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="100"><i class="fas fa-home"></i></a></li>
+                    <li><a href="#about" title="About" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="200"><i class="fas fa-user"></i></a></li>
+                    <li><a href="myprojects.html" title="Blog" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="300"><i class="fas fa-blog"></i></a></li>
+                    <li><a href="myprojects.html" title="Projects" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="400"><i class="fas fa-code"></i></a></li>
+                    <li><a href="#contact" title="Contact" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="500"><i class="fas fa-envelope"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -45,6 +45,7 @@
     <section class="main" id="main">
         <div class="content">
             <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">Namaste, I'm <br><span>Prateek </span><span class="chau">Chaulagain</span></h2>
+            <hr class="hr" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="850">
             <div class="animated-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
                 <h3>Vibe Coder</h3>
                 <h3>Graphic Designer</h3>
@@ -54,8 +55,8 @@
             
             <br><br>
             <div class="animated-text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
-            <div class="buymeacoffee"><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" href="buymeacoffee.com/pratik.chau" data-name="bmc-button" data-slug="pratik.chau" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script></a>
-            </div></div>
+                <div class="buymeacoffee" style="transform: scale(0.75); transform-origin: top left; margin-top: 10px;"><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="pratik.chau" data-color="#FFDD00" data-emoji="" data-font="Cookie" data-text='Buy me a coffee <i class="fa-solid fa-up-right-from-square" style="margin-left:5px;"></i>' data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script></div>
+            </div>
             <div class="media-icons">
                 <a href="https://www.facebook.com/genui.prati/" target="_blank" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1200"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/pratiieiik" target="_blank" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1300"><i class="fab fa-instagram"></i></a>
@@ -325,7 +326,11 @@
     
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script type="module">
-    AOS.init({ offset: 0 });
+    AOS.init({
+                once: true,
+                offset: 120,
+                easing: 'ease-out-cubic'
+            });
 
     
     // Sticky header on scroll
