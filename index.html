@@ -342,15 +342,18 @@
     });
 
         // Add scroll effect
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                document.querySelector('.navbar').style.padding = '21px 0';
-                document.querySelector('.navbar').style.background = 'rgba(6, 114, 202)';
-            } else {
-                document.querySelector('.navbar').style.padding = '15px 0';
-                document.querySelector('.navbar').style.background = 'rgba(6, 114, 202, 0)';
-            }
-        });
+        window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+
+    if (window.scrollY > 50) {
+        navbar.style.padding = '10px 20px'; // Less vertical padding on scroll
+        navbar.style.background = 'rgba(6, 114, 202, 1)';
+    } else {
+        navbar.style.padding = '16px 20px'; // More relaxed padding at top
+        navbar.style.background = 'rgba(6, 114, 202, 0)';
+    }
+});
+
 //     const scrollBtn = document.querySelector(".scroll-btn");
 //     if (scrollBtn) {
 //         window.addEventListener("scroll", function () {

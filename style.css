@@ -89,7 +89,7 @@ header .navigation a:hover, header.sticky .navigation a:hover{
     left: 0;
     right: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar-container {
@@ -99,6 +99,7 @@ header .navigation a:hover, header.sticky .navigation a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar-brand a {
