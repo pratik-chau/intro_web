@@ -599,32 +599,32 @@ section{
 }
 
 /* Carousel */
-.carousel {
+/* .carousel {
     position: relative;
     width: 100%;
     max-width: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 1rem; /* Add padding for smaller screens */
+    padding: 0 1rem;
 }
 
 .carousel-items {
     width: 100%;
-    height: 400px; /* Default height for larger screens */
+    height: 400px;
     position: relative;
     overflow: hidden;
-}
+} */
 
-.work .content .card {
+/* .work .content .card {
     position: absolute;
     width: 100%;
     height: 100%;
-    display: none; /* Hide all cards by default */
+    display: none; 
 }
 
 .work .content .card.active {
-    display: block; /* Show only the active card */
+    display: block;
 }
 
 .work .content .card .card-img {
@@ -644,12 +644,11 @@ section{
     pointer-events: none;
 }
 
-/* Navigation Arrows */
 .arrow {
     background: rgba(0, 0, 0, 0.5);
     border: none;
     color: white;
-    font-size: clamp(1rem, 3vw, 1.5rem); /* Scales arrow size */
+    font-size: clamp(1rem, 3vw, 1.5rem);
     padding: 0.5rem;
     cursor: pointer;
     position: absolute;
@@ -665,12 +664,11 @@ section{
     right: 1rem;
 }
 
-/* Gallery Indicator */
 .gallery-indicator {
     margin-top: 0.75rem;
-    font-size: clamp(0.75rem, 2vw, 0.875rem); /* Scales text size */
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
     color: #333;
-}
+} */
 
 /* Button Styling */
 .btn {
@@ -688,17 +686,14 @@ section{
 .btn:hover {
     background-color: #0056b3;
 }
-
-/* Responsive Design with Media Queries */
-
-/* Tablets and smaller desktops (max-width: 768px) */
+/* 
 @media (max-width: 768px) {
     .carousel {
-        max-width: 90%; /* Reduce width to fit smaller screens */
+        max-width: 90%;
     }
 
     .carousel-items {
-        height: 300px; /* Reduce height for tablets */
+        height: 300px;
     }
 
     .arrow {
@@ -714,10 +709,9 @@ section{
     }
 }
 
-/* Mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
     .carousel {
-        max-width: 95%; 
+        max-width: 95%;
         padding: 0 0.5rem;
     }
 
@@ -752,7 +746,6 @@ section{
     }
 }
 
-/* Very small devices (max-width: 320px) */
 @media (max-width: 320px) {
     .carousel-items {
         height: 150px;
@@ -762,7 +755,8 @@ section{
         font-size: 0.875rem;
         padding: 0.25rem;
     }
-}
+} */
+
 
 /* Contact */
 .contact{
@@ -966,6 +960,17 @@ section{
 
     header .navigation{
         display: none;
+    }
+    
+    .chau{
+        text-decoration: wavy 1px solid underline;
+    }
+    .media-icons{
+        margin-top: 0px;
+        justify-content: space-between;
+        margin-bottom: 0px;
+        transform: translateY(260px);
+        display: flex;
     }
 
     /* .navigation.active{
