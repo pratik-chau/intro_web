@@ -169,12 +169,18 @@
     <div id="iconCategories"></div>
     
     <div class="back-link-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="800">
-      <a href="javascript:history.back()" class="back-link"><i data-feather="corner-up-left" stroke="#ffffff" stroke-width="2.5"></i></a>    
-      <a href="index.html" class="back-link"><i data-feather="home" stroke="#ffffff" stroke-width="2.5"></i></a>
+      <a href="javascript:history.back()" class="back-link" title="Return back"><i data-feather="corner-up-left" stroke="#ffffff" stroke-width="2.5"></i></a>    
+      <a href="index.html" class="back-link" title="Home"><i data-feather="home" stroke="#ffffff" stroke-width="2.5"></i></a>
+      <a onclick="scrolltotop()" class="back-link" id="myBtn" title="Go to top"><i data-feather="arrow-up" stroke="#ffffff" stroke-width="2.5"></i></a>
     </div>
   </div>
+  
 
   <script>
+    let mybutton = document.getElementById("myBtn");
+        mybutton.addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
     document.addEventListener('DOMContentLoaded', () => {
       // Particles.js configuration
       particlesJS('particles-js', {
@@ -269,7 +275,7 @@
         mirror: false,
         anchorPlacement: 'top-bottom',
       });
-      
+
       // Initialize Feather icons
       feather.replace();
 
