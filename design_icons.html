@@ -5,19 +5,50 @@
   <title>Design Tool Icons</title>
   <link rel="icon" type="image/x-icon" href="Image/favicon.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.2/feather.min.js"></script>
+  
+  <!-- Add particles.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  
+  <!-- Add AOS library CSS and JS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
   <style>
+    @import url("https://fonts.googleapis.com/css?family=Syne:600,800");
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      background-image: radial-gradient(circle at top right, rgb(105, 135, 213) 0%, rgb(105, 135, 213) 14.286%,rgb(94, 121, 206) 14.286%, rgb(94, 121, 206) 28.572%,rgb(82, 107, 199) 28.572%, rgb(82, 107, 199) 42.858%,rgb(71, 94, 193) 42.858%, rgb(71, 94, 193) 57.144%,rgb(59, 80, 186) 57.144%, rgb(59, 80, 186) 71.43%,rgb(48, 66, 179) 71.43%, rgb(48, 66, 179) 85.716%,rgb(36, 52, 172) 85.716%, rgb(36, 52, 172) 100.002%);
+      background-image: url(image/bg\ \(2\).png);
+      position: relative;
     }
+    
+    /* Particles container - must be positioned */
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Behind all content */
+    }
+    
+    /* All content needs to be above particles */
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+    
     h1 {
       text-align: center;
+      font-family: Syne;
+      font-weight: 700;
       color: white;
       margin-bottom: 40px;
-      text-decoration: underline 5px dotted grey;
+      animation: text-move 2s infinite ease-in;
+
     }
     .icon-grid {
       display: grid;
@@ -57,6 +88,7 @@
     }
     .category-section {
       margin-bottom: 40px;
+      overflow: hidden;
     }
     h2 {
       margin-bottom: 20px;
@@ -136,239 +168,869 @@
     .copy-confirmation.show {
       opacity: 1;
     }
+    @keyframes text-move {
+    0% { transform: translate(0, 0); text-decoration: underline 0px;}
+    25% { transform: translate(3px, 3px); text-decoration: underline 1px;}
+    50% { transform: translate(0, 6px); text-decoration: double underline 1px;}
+    75% { transform: translate(-3px, 3px); text-decoration: wavy underline 1px;}
+    100% { transform: translate(0, 0); text-decoration: none;}
+  }
   </style>
 </head>
 <body>
-  <h1>Design Tool Icons</h1>
-  <div id="copyConfirmation" class="copy-confirmation">Copied to clipboard!</div>
+  <div id="particles-js"></div>
+  <div class="content">
+    <h1 data-aos="fade-down" data-aos-duration="1000">Design Tool Icons</h1>
+    <div id="copyConfirmation" class="copy-confirmation">Copied to clipboard!</div>
+    
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800">
+      <h2>Design Software</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="layers" data-color="#FF3366" data-name="Figma">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="layers" stroke="#FF3366" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Figma</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="framer" data-color="#0055FF" data-name="Framer">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="framer" stroke="#0055FF" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Framer</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="pen-tool" data-color="#FF9900" data-name="Illustrator">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="pen-tool" stroke="#FF9900" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Illustrator</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="image" data-color="#31A8FF" data-name="Photoshop">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="image" stroke="#31A8FF" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Photoshop</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="300" data-icon="edit-3" data-color="#9933CC" data-name="InDesign">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="edit-3" stroke="#9933CC" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">InDesign</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="350" data-icon="box" data-color="#22CCAA" data-name="Sketch">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="box" stroke="#22CCAA" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Sketch</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="400" data-icon="grid" data-color="#FF5500" data-name="Adobe XD">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="grid" stroke="#FF5500" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Adobe XD</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="450" data-icon="coffee" data-color="#6633FF" data-name="Blender">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="coffee" stroke="#6633FF" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Blender</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <h2>Prototyping & Motion</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="play-circle" data-color="#FF5533" data-name="After Effects">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="play-circle" stroke="#FF5533" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">After Effects</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="film" data-color="#CC0000" data-name="Premiere Pro">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="film" stroke="#CC0000" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Premiere Pro</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="layout" data-color="#00CC99" data-name="XD">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="layout" stroke="#00CC99" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">XD</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="git-branch" data-color="#5533FF" data-name="Principle">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="git-branch" stroke="#5533FF" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Principle</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="300" data-icon="video" data-color="#FF3366" data-name="Cinema 4D">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="video" stroke="#FF3366" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Cinema 4D</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="350" data-icon="activity" data-color="#44AAFF" data-name="Motion">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="activity" stroke="#44AAFF" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Motion</div>
+        </div>
+      </div>
+    </div>
   
-  <div class="category-section">
-    <h2>Design Software</h2>
-    <div class="icon-grid">
-      <div class="icon-card" data-icon="layers" data-color="#FF3366" data-name="Figma">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="layers" stroke="#FF3366" stroke-width="1.5"></i>
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+      <h2>Collaboration Tools</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="message-circle" data-color="#7755FF" data-name="Slack">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="message-circle" stroke="#7755FF" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Slack</div>
         </div>
-        <div class="tool-name">Figma</div>
-      </div>
-      <div class="icon-card" data-icon="framer" data-color="#0055FF" data-name="Framer">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="framer" stroke="#0055FF" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="clipboard" data-color="#00BBFF" data-name="Zeplin">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="clipboard" stroke="#00BBFF" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Zeplin</div>
         </div>
-        <div class="tool-name">Framer</div>
-      </div>
-      <div class="icon-card" data-icon="pen-tool" data-color="#FF9900" data-name="Illustrator">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="pen-tool" stroke="#FF9900" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="trello" data-color="#0079BF" data-name="Trello">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="trello" stroke="#0079BF" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Trello</div>
         </div>
-        <div class="tool-name">Illustrator</div>
-      </div>
-      <div class="icon-card" data-icon="image" data-color="#31A8FF" data-name="Photoshop">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="image" stroke="#31A8FF" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="file-text" data-color="#00CC44" data-name="InVision">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="file-text" stroke="#00CC44" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">InVision</div>
         </div>
-        <div class="tool-name">Photoshop</div>
-      </div>
-      <div class="icon-card" data-icon="edit-3" data-color="#9933CC" data-name="InDesign">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="edit-3" stroke="#9933CC" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="300" data-icon="users" data-color="#FF9900" data-name="Miro">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="users" stroke="#FF9900" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Miro</div>
         </div>
-        <div class="tool-name">InDesign</div>
-      </div>
-      <div class="icon-card" data-icon="box" data-color="#22CCAA" data-name="Sketch">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="box" stroke="#22CCAA" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="350" data-icon="check-square" data-color="#6644FF" data-name="Asana">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="check-square" stroke="#6644FF" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Asana</div>
         </div>
-        <div class="tool-name">Sketch</div>
-      </div>
-      <div class="icon-card" data-icon="grid" data-color="#FF5500" data-name="Adobe XD">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="grid" stroke="#FF5500" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="400" data-icon="globe" data-color="#2288DD" data-name="Notion">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="globe" stroke="#2288DD" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Notion</div>
         </div>
-        <div class="tool-name">Adobe XD</div>
-      </div>
-      <div class="icon-card" data-icon="coffee" data-color="#6633FF" data-name="Blender">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="coffee" stroke="#6633FF" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="450" data-icon="github" data-color="#333333" data-name="GitHub">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="github" stroke="#333333" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">GitHub</div>
         </div>
-        <div class="tool-name">Blender</div>
       </div>
     </div>
-  </div>
   
-  <div class="category-section">
-    <h2>Prototyping & Motion</h2>
-    <div class="icon-grid">
-      <div class="icon-card" data-icon="play-circle" data-color="#FF5533" data-name="After Effects">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="play-circle" stroke="#FF5533" stroke-width="1.5"></i>
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+      <h2>Development Tools</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="code" data-color="#007ACC" data-name="VS Code">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="code" stroke="#007ACC" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">VS Code</div>
         </div>
-        <div class="tool-name">After Effects</div>
-      </div>
-      <div class="icon-card" data-icon="film" data-color="#CC0000" data-name="Premiere Pro">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="film" stroke="#CC0000" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="terminal" data-color="#333333" data-name="Terminal">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="terminal" stroke="#333333" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Terminal</div>
         </div>
-        <div class="tool-name">Premiere Pro</div>
-      </div>
-      <div class="icon-card" data-icon="layout" data-color="#00CC99" data-name="XD">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="layout" stroke="#00CC99" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="git-merge" data-color="#F05032" data-name="Git">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="git-merge" stroke="#F05032" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Git</div>
         </div>
-        <div class="tool-name">XD</div>
-      </div>
-      <div class="icon-card" data-icon="git-branch" data-color="#5533FF" data-name="Principle">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="git-branch" stroke="#5533FF" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="database" data-color="#4479A1" data-name="MySQL">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="database" stroke="#4479A1" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">MySQL</div>
         </div>
-        <div class="tool-name">Principle</div>
-      </div>
-      <div class="icon-card" data-icon="video" data-color="#FF3366" data-name="Cinema 4D">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="video" stroke="#FF3366" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="300" data-icon="server" data-color="#339933" data-name="Node.js">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="server" stroke="#339933" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Node.js</div>
         </div>
-        <div class="tool-name">Cinema 4D</div>
-      </div>
-      <div class="icon-card" data-icon="activity" data-color="#44AAFF" data-name="Motion">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="activity" stroke="#44AAFF" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="350" data-icon="chrome" data-color="#4285F4" data-name="Chrome DevTools">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="chrome" stroke="#4285F4" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Chrome DevTools</div>
         </div>
-        <div class="tool-name">Motion</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="category-section">
-    <h2>Collaboration Tools</h2>
-    <div class="icon-grid">
-      <div class="icon-card" data-icon="message-circle" data-color="#7755FF" data-name="Slack">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="message-circle" stroke="#7755FF" stroke-width="1.5"></i>
-        </div>
-        <div class="tool-name">Slack</div>
-      </div>
-      <div class="icon-card" data-icon="clipboard" data-color="#00BBFF" data-name="Zeplin">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="clipboard" stroke="#00BBFF" stroke-width="1.5"></i>
-        </div>
-        <div class="tool-name">Zeplin</div>
-      </div>
-      <div class="icon-card" data-icon="trello" data-color="#0079BF" data-name="Trello">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="trello" stroke="#0079BF" stroke-width="1.5"></i>
-        </div>
-        <div class="tool-name">Trello</div>
-      </div>
-      <div class="icon-card" data-icon="file-text" data-color="#00CC44" data-name="InVision">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="file-text" stroke="#00CC44" stroke-width="1.5"></i>
-        </div>
-        <div class="tool-name">InVision</div>
-      </div>
-      <div class="icon-card" data-icon="users" data-color="#FF9900" data-name="Miro">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="users" stroke="#FF9900" stroke-width="1.5"></i>
-        </div>
-        <div class="tool-name">Miro</div>
-      </div>
-      <div class="icon-card" data-icon="check-square" data-color="#6644FF" data-name="Asana">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="check-square" stroke="#6644FF" stroke-width="1.5"></i>
-        </div>
-        <div class="tool-name">Asana</div>
-      </div>
-      <div class="icon-card" data-icon="globe" data-color="#2288DD" data-name="Notion">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="globe" stroke="#2288DD" stroke-width="1.5"></i>
-        </div>
-        <div class="tool-name">Notion</div>
-      </div>
-      <div class="icon-card" data-icon="github" data-color="#333333" data-name="GitHub">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="github" stroke="#333333" stroke-width="1.5"></i>
-        </div>
-        <div class="tool-name">GitHub</div>
       </div>
     </div>
-  </div>
-
-  <div class="category-section">
-    <h2>Development Tools</h2>
-    <div class="icon-grid">
-      <div class="icon-card" data-icon="code" data-color="#007ACC" data-name="VS Code">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="code" stroke="#007ACC" stroke-width="1.5"></i>
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+      <h2>Web Tools</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="globe" data-color="#F06529" data-name="HTML5">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="globe" stroke="#F06529" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">HTML5</div>
         </div>
-        <div class="tool-name">VS Code</div>
-      </div>
-      <div class="icon-card" data-icon="terminal" data-color="#333333" data-name="Terminal">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="terminal" stroke="#333333" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="feather" data-color="#2965F1" data-name="CSS3">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="feather" stroke="#2965F1" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">CSS3</div>
         </div>
-        <div class="tool-name">Terminal</div>
-      </div>
-      <div class="icon-card" data-icon="git-merge" data-color="#F05032" data-name="Git">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="git-merge" stroke="#F05032" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="zap" data-color="#F7DF1E" data-name="JavaScript">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="zap" stroke="#F7DF1E" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">JavaScript</div>
         </div>
-        <div class="tool-name">Git</div>
-      </div>
-      <div class="icon-card" data-icon="database" data-color="#4479A1" data-name="MySQL">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="database" stroke="#4479A1" stroke-width="1.5"></i>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="layers" data-color="#764ABC" data-name="Redux">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="layers" stroke="#764ABC" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Redux</div>
         </div>
-        <div class="tool-name">MySQL</div>
-      </div>
-      <div class="icon-card" data-icon="server" data-color="#339933" data-name="Node.js">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="server" stroke="#339933" stroke-width="1.5"></i>
-        </div>
-        <div class="tool-name">Node.js</div>
-      </div>
-      <div class="icon-card" data-icon="chrome" data-color="#4285F4" data-name="Chrome DevTools">
-        <div class="tooltip">Click to copy</div>
-        <div class="icon-wrapper">
-          <i data-feather="chrome" stroke="#4285F4" stroke-width="1.5"></i>
-        </div>
-        <div class="tool-name">Chrome DevTools</div>
       </div>
     </div>
-  </div>
-  
-  <div class="back-link-container">
-    <a href="index.html" class="back-link">Return Home</a>
+    
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000">
+      <h2>Cloud & Hosting</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="cloud" data-color="#FF9900" data-name="AWS">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="cloud" stroke="#FF9900" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">AWS</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="upload-cloud" data-color="#4285F4" data-name="Google Cloud">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="upload-cloud" stroke="#4285F4" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Google Cloud</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="server" data-color="#0078D4" data-name="Azure">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="server" stroke="#0078D4" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Azure</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="hard-drive" data-color="#FF5722" data-name="Firebase">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="hard-drive" stroke="#FF5722" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Firebase</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1200">
+      <h2>Utilities & Extensions</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="lock" data-color="#4CAF50" data-name="Auth0">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="lock" stroke="#4CAF50" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Auth0</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="link" data-color="#2196F3" data-name="Zapier">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="link" stroke="#2196F3" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Zapier</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="cpu" data-color="#9C27B0" data-name="Postman">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="cpu" stroke="#9C27B0" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Postman</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="activity" data-color="#03A9F4" data-name="Lighthouse">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="activity" stroke="#03A9F4" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Lighthouse</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1400">
+      <h2>UI Libraries & Frameworks</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="box" data-color="#61DAFB" data-name="React">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="box" stroke="#61DAFB" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">React</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="layers" data-color="#4FC08D" data-name="Vue.js">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="layers" stroke="#4FC08D" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Vue.js</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="grid" data-color="#E44D26" data-name="Angular">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="grid" stroke="#E44D26" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Angular</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="layout" data-color="#38B2AC" data-name="Tailwind CSS">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="layout" stroke="#38B2AC" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Tailwind CSS</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="300" data-icon="columns" data-color="#563D7C" data-name="Bootstrap">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="columns" stroke="#563D7C" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Bootstrap</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="350" data-icon="sidebar" data-color="#00BCD4" data-name="Material UI">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="sidebar" stroke="#00BCD4" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Material UI</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1600">
+      <h2>Deployment & Monitoring</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="box" data-color="#24292E" data-name="Docker">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="box" stroke="#24292E" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Docker</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="cpu" data-color="#326CE5" data-name="Kubernetes">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="cpu" stroke="#326CE5" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Kubernetes</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="trending-up" data-color="#00C853" data-name="Netlify">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="trending-up" stroke="#00C853" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Netlify</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="cloud-lightning" data-color="#F38020" data-name="Heroku">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="cloud-lightning" stroke="#F38020" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Heroku</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="300" data-icon="activity" data-color="#FF6D00" data-name="New Relic">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="activity" stroke="#FF6D00" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">New Relic</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="350" data-icon="bar-chart-2" data-color="#00B8D9" data-name="Datadog">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="bar-chart-2" stroke="#00B8D9" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Datadog</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1800">
+      <h2>Productivity & Misc</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="calendar" data-color="#2196F3" data-name="Google Calendar">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="calendar" stroke="#2196F3" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Google Calendar</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="clock" data-color="#3F51B5" data-name="Time Doctor">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="clock" stroke="#3F51B5" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Time Doctor</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="clipboard" data-color="#FFC107" data-name="Todoist">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="clipboard" stroke="#FFC107" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Todoist</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="archive" data-color="#00BCD4" data-name="Google Keep">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="archive" stroke="#00BCD4" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Google Keep</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="300" data-icon="book" data-color="#9C27B0" data-name="Notion">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="book" stroke="#9C27B0" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Notion</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="350" data-icon="coffee" data-color="#795548" data-name="Forest App">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="coffee" stroke="#795548" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Forest App</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <h2>Shopping & Essentials</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="shopping-cart" data-color="#FF9800" data-name="Groceries">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="shopping-cart" stroke="#FF9800" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Groceries</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="shopping-bag" data-color="#9C27B0" data-name="Clothing">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="shopping-bag" stroke="#9C27B0" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Clothing</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="credit-card" data-color="#4CAF50" data-name="Payments">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="credit-card" stroke="#4CAF50" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Payments</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="truck" data-color="#00BCD4" data-name="Delivery">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="truck" stroke="#00BCD4" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Delivery</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+      <h2>Food & Dining</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="coffee" data-color="#795548" data-name="Coffee">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="coffee" stroke="#795548" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Coffee</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="shopping-bag" data-color="#FF5722" data-name="Takeaway">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="shopping-bag" stroke="#FF5722" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Takeaway</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="book-open" data-color="#FF9800" data-name="Recipes">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="book-open" stroke="#FF9800" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Recipes</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="clock" data-color="#FFC107" data-name="Meal Planning">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="clock" stroke="#FFC107" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Meal Planning</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+      <h2>Travel & Transport</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="map" data-color="#3F51B5" data-name="Map">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="map" stroke="#3F51B5" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Map</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="navigation" data-color="#2196F3" data-name="Navigation">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="navigation" stroke="#2196F3" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Navigation</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="send" data-color="#009688" data-name="Tickets">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="send" stroke="#009688" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Tickets</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="compass" data-color="#00BCD4" data-name="Explore">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="compass" stroke="#00BCD4" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Explore</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+      <h2>Health & Wellness</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="heart" data-color="#E91E63" data-name="Heart Rate">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="heart" stroke="#E91E63" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Heart Rate</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="sun" data-color="#FFC107" data-name="Morning Routine">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="sun" stroke="#FFC107" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Morning Routine</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="moon" data-color="#3F51B5" data-name="Sleep Tracker">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="moon" stroke="#3F51B5" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Sleep Tracker</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="activity" data-color="#8BC34A" data-name="Exercise">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="activity" stroke="#8BC34A" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Exercise</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+      <h2>Communication</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="phone" data-color="#4CAF50" data-name="Call">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="phone" stroke="#4CAF50" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Call</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="message-circle" data-color="#03A9F4" data-name="Chat">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="message-circle" stroke="#03A9F4" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Chat</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="mail" data-color="#2196F3" data-name="Email">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="mail" stroke="#2196F3" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Email</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="video" data-color="#FF5722" data-name="Video Call">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="video" stroke="#FF5722" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Video Call</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+      <h2>Entertainment</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="film" data-color="#E91E63" data-name="Movies">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="film" stroke="#E91E63" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Movies</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="music" data-color="#9C27B0" data-name="Music">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="music" stroke="#9C27B0" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Music</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="tv" data-color="#3F51B5" data-name="TV Shows">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="tv" stroke="#3F51B5" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">TV Shows</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="gamepad" data-color="#FF9800" data-name="Games">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="activity" stroke="#FF9800" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Games</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+      <h2>Study & Learning</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="book-open" data-color="#2196F3" data-name="Books">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="book-open" stroke="#2196F3" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Books</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="edit-2" data-color="#00BCD4" data-name="Notes">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="edit-2" stroke="#00BCD4" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Notes</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="calendar" data-color="#FF5722" data-name="Study Plan">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="calendar" stroke="#FF5722" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Study Plan</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="clipboard" data-color="#4CAF50" data-name="Assignments">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="clipboard" stroke="#4CAF50" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Assignments</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="300" data-icon="clock" data-color="#673AB7" data-name="Time Table">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="clock" stroke="#673AB7" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Time Table</div>
+        </div>
+      </div>
+    </div>
+    <div class="category-section" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
+      <h2>Kids & Learning</h2>
+      <div class="icon-grid">
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="100" data-icon="smile" data-color="#FFC107" data-name="Fun Learning">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="smile" stroke="#FFC107" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Fun Learning</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="150" data-icon="pen-tool" data-color="#03A9F4" data-name="Drawing">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="pen-tool" stroke="#03A9F4" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Drawing</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="200" data-icon="music" data-color="#E91E63" data-name="Rhymes">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="music" stroke="#E91E63" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Rhymes</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="250" data-icon="book" data-color="#8BC34A" data-name="Story Time">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="book" stroke="#8BC34A" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Story Time</div>
+        </div>
+        <div class="icon-card" data-aos="zoom-in" data-aos-delay="300" data-icon="gift" data-color="#FF5722" data-name="Rewards">
+          <div class="tooltip">Click to copy</div>
+          <div class="icon-wrapper">
+            <i data-feather="gift" stroke="#FF5722" stroke-width="1.5"></i>
+          </div>
+          <div class="tool-name">Rewards</div>
+        </div>
+      </div>
+    </div>
+                                        
+    
+    <div class="back-link-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="800">
+      <a href="javascript:history.back()" class="back-link"><i data-feather="corner-up-left" stroke="#ffffff" stroke-width="2.5"></i></a>    
+      <a href="index.html" class="back-link"><i data-feather="home" stroke="#ffffff" stroke-width="2.5"></i></a>
+    </div>
   </div>
 
   <script>
-    // Initialize Feather icons
+    // Initialize everything when DOM is loaded
     document.addEventListener('DOMContentLoaded', () => {
+      // Initialize particles.js
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 80,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 0.3,
+            "random": false,
+            "anim": {
+              "enable": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.2,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 2,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 0.6
+              }
+            },
+            "push": {
+              "particles_nb": 4
+            }
+          }
+        },
+        "retina_detect": true
+      });
+
+      // Initialize AOS
+      AOS.init({
+        // Global settings
+        duration: 800,          // Animation duration
+        easing: 'ease-in-out',  // Animation easing
+        once: true,             // Whether animation should happen only once
+        mirror: false,          // Whether elements should animate out when scrolling past them
+        anchorPlacement: 'top-bottom', // Defines which position of the element regarding to window should trigger the animation
+      });
+      
+      // Initialize Feather icons
       feather.replace();
       
       // Add click event listener to all icon cards
