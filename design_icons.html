@@ -5,11 +5,7 @@
   <title>Design Tool Icons</title>
   <link rel="icon" type="image/x-icon" href="Image/favicon.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.2/feather.min.js"></script>
-  
-  <!-- Add particles.js library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-  
-  <!-- Add AOS library CSS and JS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   
@@ -23,24 +19,22 @@
       background-image: url(image/bg\ \(2\).png);
       position: relative;
     }
-    
-    /* Particles container - must be positioned */
+  
     #particles-js {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1; /* Behind all content */
+      z-index: -1;
     }
-    
-    /* All content needs to be above particles */
+  
     .content {
       position: relative;
       z-index: 1;
       padding: 20px;
     }
-    
+  
     h1 {
       text-align: center;
       font-family: Syne;
@@ -48,13 +42,14 @@
       color: white;
       margin-bottom: 40px;
       animation: text-move 2s infinite ease-in;
-
     }
+  
     .icon-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
       gap: 24px;
     }
+  
     .icon-card {
       display: flex;
       flex-direction: column;
@@ -67,10 +62,12 @@
       cursor: pointer;
       position: relative;
     }
+  
     .icon-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
+  
     .icon-wrapper {
       background: #f2f2f2;
       width: 64px;
@@ -81,25 +78,30 @@
       justify-content: center;
       margin-bottom: 12px;
     }
+  
     .tool-name {
       font-weight: 500;
       margin-top: 8px;
       text-align: center;
     }
+  
     .category-section {
       margin-bottom: 40px;
       overflow: hidden;
     }
+  
     h2 {
       margin-bottom: 20px;
       color: whitesmoke;
       border-bottom: 1px solid #eee;
       padding-bottom: 10px;
     }
+  
     .back-link-container {
       text-align: center;
       margin-top: 40px;
     }
+  
     .back-link {
       display: inline-block;
       margin-top: 3rem;
@@ -117,19 +119,18 @@
       letter-spacing: 2px;
       animation: gradient-shift 1s ease-in-out infinite;
     }
-    
+  
     @keyframes gradient-shift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    
+  
     .back-link:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 30px rgba(139, 92, 246, 0.7);
     }
-
-    /* Tooltip styles */
+  
     .tooltip {
       position: absolute;
       top: -40px;
@@ -144,12 +145,11 @@
       transition: opacity 0.3s;
       pointer-events: none;
     }
-    
+  
     .icon-card:hover .tooltip {
       opacity: 0.9;
     }
-    
-    /* Copy confirmation styles */
+  
     .copy-confirmation {
       position: fixed;
       top: 20px;
@@ -164,18 +164,8 @@
       opacity: 0;
       transition: opacity 0.3s;
     }
-    
-    .copy-confirmation.show {
-      opacity: 1;
-    }
-    @keyframes text-move {
-    0% { transform: translate(0, 0); text-decoration: underline 0px;}
-    25% { transform: translate(3px, 3px); text-decoration: underline 1px;}
-    50% { transform: translate(0, 6px); text-decoration: double underline 1px;}
-    75% { transform: translate(-3px, 3px); text-decoration: wavy underline 1px;}
-    100% { transform: translate(0, 0); text-decoration: none;}
-  }
   </style>
+  
 </head>
 <body>
   <div id="particles-js"></div>
@@ -933,9 +923,7 @@
   </div>
 
   <script>
-    // Initialize everything when DOM is loaded
     document.addEventListener('DOMContentLoaded', () => {
-      // Initialize particles.js
       particlesJS('particles-js', {
         "particles": {
           "number": {
@@ -1022,18 +1010,16 @@
 
       // Initialize AOS
       AOS.init({
-        // Global settings
-        duration: 800,          // Animation duration
-        easing: 'ease-in-out',  // Animation easing
-        once: true,             // Whether animation should happen only once
-        mirror: false,          // Whether elements should animate out when scrolling past them
-        anchorPlacement: 'top-bottom', // Defines which position of the element regarding to window should trigger the animation
+        duration: 800,          
+        easing: 'ease-in-out',  
+        once: true,             
+        mirror: false,          
+        anchorPlacement: 'top-bottom', 
       });
       
       // Initialize Feather icons
       feather.replace();
       
-      // Add click event listener to all icon cards
       const iconCards = document.querySelectorAll('.icon-card');
       const copyConfirmation = document.getElementById('copyConfirmation');
       
@@ -1043,7 +1029,6 @@
           const iconColor = card.getAttribute('data-color');
           const toolName = card.getAttribute('data-name');
           
-          // Create the HTML and CSS to copy
           const htmlCode = `<div class="icon-wrapper">
   <i data-feather="${iconName}" stroke="${iconColor}" stroke-width="1.5"></i>
 </div>
@@ -1074,14 +1059,11 @@ ${cssCode}
 <!-- Don't forget to include Feather Icons in your project -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.2/feather.min.js"></script> -->`;
           
-          // Copy to clipboard
           navigator.clipboard.writeText(combinedCode)
             .then(() => {
-              // Show the confirmation
               copyConfirmation.textContent = `Copied ${toolName} icon to clipboard!`;
               copyConfirmation.classList.add('show');
               
-              // Hide the confirmation after 2 seconds
               setTimeout(() => {
                 copyConfirmation.classList.remove('show');
               }, 2000);
