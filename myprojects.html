@@ -74,7 +74,7 @@
                     </div>
                     </div>
                     <div class="project-content">
-                        <h2 class="project-title" data-project="project3">Vibe Coded Design Icons</h2>
+                        <h2 class="project-title" data-project="project1">Vibe Coded Design Icons</h2>
                         <p>A web interface showcasing design tool icons arranged using vibe-coded principles. Each icon is placed based on emotional rhythm, mood, and flow—forming intuitive groupings like Design Software and Prototyping & Motion. The result is a layout that feels natural, engaging, and easy to interact with.</p>
                         <div>
                             <span class="project-tag">UI/UX</span>
@@ -85,7 +85,7 @@
                     </div>
                     </div>
                     
-                    <div class="project-details" id="project3-details">
+                    <div class="project-details" id="project1-details">
                         <h3>Project Overview</h3>
                         <p>This project showcases an icon system designed using vibe-coded visual logic. It uses emotional sequencing and balanced composition to guide users through categorized tools with ease. The interface features a split layout, distinguishing between design software and motion tools for better clarity and user flow.</p>
                     
@@ -114,7 +114,7 @@
                 <div class="project-meta">
                     <span class="project-date"><i class="far fa-calendar-alt"></i> March 10, 2025</span>
                 </div>
-                <a class="read-more">Read More</a>
+                <a class="read-more" data-project="project1">Read More</a>
             </div>
         </article>
         
@@ -191,7 +191,7 @@
                 <div class="project-meta">
                     <span class="project-date"><i class="far fa-calendar-alt"></i> April 5, 2025</span>
                 </div>
-                <a class="read-more">Read More</a>
+                <a class="read-more" data-project="project2">Read More</a>
             </div>
         </article>
         
@@ -233,7 +233,7 @@
                     </div>
                 </div>
                 <div class="project-content">
-                    <h2 class="project-title" data-project="project2">Advanced AI Research in Healthcare Applications</h2>
+                    <h2 class="project-title" data-project="project5">Advanced AI Research in Healthcare Applications</h2>
                     <p>Investigating how artificial intelligence is transforming diagnostics, treatment planning, and patient care through machine learning algorithms and predictive analytics.</p>
                     <div>
                         <span class="project-tag">AI</span>
@@ -272,7 +272,7 @@
                 <div class="project-meta">
                     <span class="project-date"><i class="far fa-calendar-alt"></i> April 5, 2025</span>
                 </div>
-                <a href="404.html" class="read-more">Read More</a>
+                <a href="404.html" class="read-more" data-project="project3">Read More</a>
             </div>
         </article>
         
@@ -367,7 +367,7 @@
                 <div class="project-meta">
                     <span class="project-date"><i class="far fa-calendar-alt"></i> April 5, 2025</span>
                 </div>
-                <a href="404.html" class="read-more">Read More</a>
+                <a href="404.html" class="read-more" data-project="project4">Read More</a>
             </div>
         </article>
     </div>
@@ -499,7 +499,15 @@
                 details.classList.toggle('active');
             });
         });
-    })
+        
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', function() {
+            const projectId = this.getAttribute('data-project');
+            const details = document.getElementById(projectId + '-details');
+            details.classList.toggle('active');
+        });
+    });
+})
     </script>
 </body>
 </html>

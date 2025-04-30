@@ -182,7 +182,7 @@
             cursor: pointer;
         }
         
-        .project-image-wrapper:hover .image-overlay {
+        .project-card:hover .image-overlay {
             opacity: 1;
         }
         
