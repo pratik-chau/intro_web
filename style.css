@@ -986,11 +986,6 @@ section{
     .main .content .hr1{
         display: none;
     }
-    
-    .chau{
-        text-decoration: wavy 1px solid underline;
-    }
-
     .buymeacoffee{
         display: none;
     }
@@ -1000,7 +995,7 @@ section{
         display: flex;
         justify-content: space-between;
         filter: drop-shadow(2px 3px 2px rgb(255, 0, 0));
-        transform: translateY(260px);
+        transform: translate(10px, 130px);
     }
 
     /* .navigation.active{
@@ -1062,12 +1057,12 @@ section{
     }
 
     .main{
-        background-image: url(Image/bg\ \(2\).png);
+        background-image: url(Image/bkgrnd.png);
         background-attachment: scroll;
     }
     .main .content{
         padding: 100% 15px 0 15px;
-        transform: translateY(-33%);
+        transform: translateY(-16%);
     }
     .main .content h2 span{
         padding-right: 50px;
