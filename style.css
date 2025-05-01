@@ -82,7 +82,7 @@ header .navigation a:hover, header.sticky .navigation a:hover{
 .navbar {
     background: #0672cae6;
     backdrop-filter: blur(10px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     padding: 15px 0;
     position: fixed;
     top: 0;
