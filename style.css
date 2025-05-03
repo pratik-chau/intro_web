@@ -21,6 +21,12 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+@media
+(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 
 body, html{
     overflow-x: hidden;
