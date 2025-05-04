@@ -399,17 +399,14 @@ section{
 .about .content .col-left .img-card{
     position: relative;
     width: 100%;
-    min-height: 450px;
-}
-
-.about .content .col-left .img-card img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    background-color: rgba(34, 68, 57, 0.817);
+    background: url(Image/img1.jpg);
+    background-size: 100%;
+    background-position-y: 90%;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    border-radius: 20px;
+    box-shadow: 10px 12px 5px rgba(0, 0, 0, 0.7);
 }
 
 .about .content .col-right .content-title{
@@ -595,6 +592,85 @@ section{
     filter: drop-shadow(-10px 4px 8px rgb(0, 0, 0, 0.3));
     transition: transform 0.2s, box-shadow 0.2s;
     }
+/* Projects */
+.projects {
+    /* background-image: linear-gradient(35deg, rgba(253, 253, 253, 0.03) 0%, rgba(253, 253, 253, 0.03) 53%,rgba(109, 109, 109, 0.03) 53%, rgba(109, 109, 109, 0.03) 59%,rgba(228, 228, 228, 0.03) 59%, rgba(228, 228, 228, 0.03) 66%,rgba(42, 42, 42, 0.03) 66%, rgba(42, 42, 42, 0.03) 95%,rgba(165, 165, 165, 0.03) 95%, rgba(165, 165, 165, 0.03) 100%),linear-gradient(205deg, rgba(62, 62, 62, 0.03) 0%, rgba(62, 62, 62, 0.03) 31%,rgba(200, 200, 200, 0.03) 31%, rgba(200, 200, 200, 0.03) 41%,rgba(30, 30, 30, 0.03) 41%, rgba(30, 30, 30, 0.03) 47%,rgba(151, 151, 151, 0.03) 47%, rgba(151, 151, 151, 0.03) 60%,rgba(95, 95, 95, 0.03) 60%, rgba(95, 95, 95, 0.03) 100%),linear-gradient(30deg, rgba(7, 7, 7, 0.03) 0%, rgba(7, 7, 7, 0.03) 19%,rgba(63, 63, 63, 0.03) 19%, rgba(63, 63, 63, 0.03) 33%,rgba(175, 175, 175, 0.03) 33%, rgba(175, 175, 175, 0.03) 37%,rgba(244, 244, 244, 0.03) 37%, rgba(244, 244, 244, 0.03) 60%,rgba(177, 177, 177, 0.03) 60%, rgba(177, 177, 177, 0.03) 100%),linear-gradient(90deg, rgb(162, 162, 162),rgb(229, 229, 229)); */
+    margin: 0 auto 30px auto;
+}
+.projects .content,
+.project_btn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.title p {
+    font-size: 1em;
+    width: 80%;
+    text-align: center;
+}
+
+.projects .content .card {
+    background-color: var(--partwhite);
+    width: 340px;
+    margin: 10px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.15);
+    transition: 0.3s linear;
+    min-height: 20rem;
+    z-index: 1;
+}
+.projects .content .card .bg_text{
+    opacity: 0;
+    color: var(--accentgold);
+    z-index: -1;
+    visibility: hidden;
+    transition: visibility 0.3s ease, transform 1s ease-in;
+}
+.projects .content .card:hover .bg_text{
+    visibility: visible;
+    opacity: 0.2;
+    transform: translate(5rem,5rem) scale(3);
+    animation: rotate 3s infinite linear;
+
+}
+@keyframes rotate {
+    from {
+      transform: scale(5) rotate(0deg);
+    }
+    to {
+      transform: scale(5) rotate(360deg);
+    }
+  }
+  
+.projects .content .card .info h3 {
+    text-align: center;
+    color: var(--royalblue);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 10px;
+    transition: 0.3s linear;
+}
+
+.projects .content .card:hover {
+    background-color: var(--royalblue);
+    color: var(--partwhite);
+}
+
+.projects .content .card:hover .info h3 {
+    transform: translateY(-1px);
+}
+
+.projects .content .card:hover .info h3 {
+    color: var(--partwhite);
+}
 /* Work */
 .work {
     min-height: 2vh;
@@ -780,7 +856,7 @@ section{
 
 /* Contact */
 .contact{
-    background-color: white;
+    background-color: #f5f5f5ac;
 }
 .contact .content{
     display: flex;
