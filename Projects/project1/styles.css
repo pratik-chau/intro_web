@@ -1,0 +1,64 @@
+
+        @font-face {
+            font-family: 'Reospec';
+            src: url('Reospec-Font/Reospec.otf') format('woff'),
+            url('Reospec-Font/reospec.ttf') format('truetype');
+        }
+         body {
+            font-family: Reospec, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: var(--cf3);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .container h1 {
+            font-size: 2rem; 
+            color: black;
+            text-decoration: overline;
+            margin-bottom: 1.5rem;
+        }
+        .container input {
+            width: 90%;
+            padding: 10px;
+            border: none;
+            cursor: text;
+            margin-bottom: 1rem;
+            transition: border-radius 0.3s ease-in-out;
+        }
+        .container input:hover {
+            border-radius: 25px;
+        }
+        .container button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            background-image: linear-gradient(160deg, #0093E9, #80D0C7);
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        button:hover {
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            background-image: linear-gradient(100deg, #0093E9, #80D0C7);
+
+        }
+        #qrcode {
+            margin-top: 1rem;
+        }
+        #download {
+            display: none;
+            margin-top: 1rem;
+            transform: translate(155%, -400%);
+            background-image: linear-gradient(160deg, #0042e7, #10f1a9);
+        }
