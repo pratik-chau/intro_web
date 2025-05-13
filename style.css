@@ -86,7 +86,7 @@ header .navigation a:hover, header.sticky .navigation a:hover{
     color: var(--accentgold);
 } */
 .navbar {
-    background: #0672cae6;
+    background: var(--royalblue);
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     padding: 15px 0;
@@ -404,7 +404,7 @@ section{
     background-size: 100%;
     background-position-y: 90%;
     background-repeat: no-repeat;
-    min-height: 500px;
+    min-height: 440px;
     border-radius: 20px;
     box-shadow: 10px 12px 5px rgba(0, 0, 0, 0.7);
 }
@@ -1057,7 +1057,9 @@ section{
     header .navigation{
         display: none;
     }
-
+    .navbar-container {
+        justify-content: center;
+    }
     .navbar-brand a {
         font-size: 2em;
     }
@@ -1076,7 +1078,7 @@ section{
         padding: 30px;
         display: flex;
         justify-content: space-between;
-        filter: drop-shadow(2px 3px 2px rgb(255, 0, 0));
+        filter: drop-shadow(0 0 10px var(--accentgold));
         transform: translate(10px, 130px);
     }
 
@@ -1174,8 +1176,19 @@ section{
         width: 100%;
         position: relative;
     }
+    .about .content .col-left .img-card{
+        background: url(Image/img1.jpg);
+        background-position-y: 100%;
+        background-size: cover;
+        min-height: 400px;
+        border-radius: 100%;
+        box-shadow: 2px 16px 16px rgba(0, 0, 0, 0.7);
+    }
     .about .content .col-right{
         margin-top: 40px;
+    }
+    .about .content .col-right .paragraph-text{
+        font-size: 1em;
     }
     /* Skills */
     .skills .content{
