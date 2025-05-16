@@ -11,55 +11,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.2/feather.min.js"></script>
     <script src="script.js" type="module"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="themeToggle.js"></script>
 </head>
 <body>
-    <!-- <header>
-        <a href="" class="brand" data-aos="zoom-in" data-aos-duration="1000"><span>Prateek</span></a>
-        <div class="menu-btn"></div>
-        <div class="navigation">
-            <a href="#main" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Home</a>
-            <a href="#about"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About</a>
-            <a href="#skills" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Skills</a>
-            <a href="#services" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Services</a>
-            <a href="myprojects.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Projects</a>
-            <a href="#contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact</a>
-        </div>
-    </header> -->
-
     <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
-        <div class="navbar-container">
             <div class="navbar-brand">
-                <span><a href="https://prateekchaulagain.com.np/">PRATEEK</a></span>
+                <a href="/">PRATEEK</a>
             </div>
             <div class="navbar-menu">
                 <ul class="navbar-links">
                     <li><a href="#main" title="Home"  data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="100"><i class="fas fa-home"></i></a></li>
                     <li><a href="#about" title="About" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="200"><i class="fas fa-user"></i></a></li>
                     <li><a href="myprojects.html" title="Blog" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="300"><i class="fas fa-blog"></i></a></li>
-                    <li><a href="#services" title="Projects" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="400"><i class="fas fa-user-cog"></i></a></li>
-                    <li><a href="#contact" title="Contact" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="500"><i class="fas fa-envelope"></i></a></li>
+                    <li><a href="#skills" title="Skills" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="400"><i class="fas fa-cog"></i></a></li>
+                    <li><a href="#services" title="Projects" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="500"><i class="fas fa-user-cog"></i></a></li>
+                    <li><a href="#projects" title="Projects" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="600"><i class="fas fa-code"></i></a></li>
+                    <li><a href="#contact" title="Contact" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="700"><i class="fas fa-envelope"></i></a></li>
+                    <li><a title="Theme Toggle" onclick="toggleTheme()" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="800"><i class="fas fa-moon"></i></a></li>
                 </ul>
             </div>
-        </div>
     </nav>
     <section class="main" id="main">
         <div class="content">
             <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">Namaste, I'm <br><span>Prateek </span><span class="chau">Chaulagain</span></h2>
             <hr class="hr1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="850">
             <h4 class="context" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800"><span>in & as</span><hr></h4>
-            <div class="animated-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
+            <div class="animated-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
                 <h3>Vibe Coder</h3>
                 <h3>Graphic Designer</h3>
                 <h3>UI/UX Designer</h3>
                 <h3>Engineer (to be)</h3>
             </div>
-            <hr data-aos="fade-left" data-aos-duration="1000" data-aos-delay="950">
+            <hr data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
             
             <br><br>
-            <div class="animated-text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
+            <div class="animated-text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="00">
                 <div class="buymeacoffee" style="transform: scale(0.75); transform-origin: top left; margin-top: 10px;"><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="pratik.chau" data-color="#FFDD00" data-emoji="" data-font="Cookie" data-text='Buy me a coffee <i class="fa-solid fa-up-right-from-square" style="margin-left:5px;"></i>' data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script></div>
             </div>
-            <div class="media-icons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+            <div class="media-icons">
                 <a href="https://www.facebook.com/genui.prati/" target="_blank" data-aos="fade-in" data-aos-duration="1000"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/pratiieiik" target="_blank" data-aos="fade-in" data-aos-duration="1000"><i class="fab fa-instagram"></i></a>
                 <a href="https://x.com/pratik_chau" target="_blank" data-aos="fade-in" data-aos-duration="1000"><i class="fab fa-x-twitter"></i></a>
@@ -85,7 +76,7 @@
                     From sketching UIs that whisper elegance to coding features that make users go "Wow!" — I do it all with a smirk and a playlist on loop. If passion for design and tech was a competition, I’d at least win the participation trophy with glitter. Stick around, you might just fall for my quirks (and maybe my code).
                 </p>
                 <hr>
-                <!-- <a href="index2.html" class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="600">CV here -></a> -->
+                <!-- <a class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="600">CV here -></a> -->
             </div>
         </div>
     </section>
@@ -115,34 +106,64 @@
                 <div class="bar">
                     <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
                         <span><img src="Image/icon_assets/figma-svgrepo-com.png"></span>
-                        <span>2 yr+</span>
+                        <span>2 yrs+</span>
                     </div>
                     <div class="line figma" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="240"></div>
                 </div>
                 <div class="bar">
                     <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="300">
                         <span><img src="Image/icon_assets/framer-svgrepo-com.png"></span>
-                        <span><1 yr</span>
+                        <span>1 yr</span>
                     </div>
                     <div class="line framer" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="340"></div>
                 </div>
                 <div class="bar">
                     <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">
                         <span><img src="Image/icon_assets/adobe-illustrator-svgrepo-com.png"></span>
-                        <span><1 yr</span>
+                        <span>1 yr</span>
                     </div>
                     <div class="line illustrator" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440"></div>
                 </div>
-                <!-- <div class="bar">
-                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="500">
-                        <span><img src="Image/icon_assets/phase-svgrepo-com.png"></span>
-                        <span><1 yr</span>
-                    </div>
-                    <div class="line phase" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="540"></div>
-                </div> -->
             </div>
         </div>
     </section>
+
+    <!-- Features DIV -->
+    <div class="features-section">
+        <div class="features-container">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="i" data-lucide="sparkles"></i>
+                </div>
+                <h3>Vibe Coder</h3>
+                <p>Mixing code and AI to create digital magic.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="i" data-lucide="palette"></i>
+                </div>
+                <h3>Graphics Designer</h3>
+                <p>Crafting visuals with high resolution assets.</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="i" data-lucide="layout-template"></i>
+                </div>
+                <h3>UI/UX Designer</h3>
+                <p>Designing interfaces that feel intuitive and beautiful.</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="i" data-lucide="graduation-cap"></i>
+                </div>
+                <h3>Engineer (to be)</h3>
+                <p>Transforming ideas into reality through technology.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Services Section -->
     <section class="services" id="services">
@@ -162,7 +183,7 @@
                 
                 <div class="info">
                     <h3>Web Framework Design</h3>
-                    <p>I build responsive, trendy, and “wow-is-this-even-HTML?” websites using modern frameworks. Sleek and scalable, just like my playlist.</p>
+                    <p>Build sleek, responsive websites with modern frameworks—keep it fast, flexible, and impressive.</p>
                 </div>
             </div>
             <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
@@ -173,7 +194,7 @@
             </div>
                 <div class="info">
                     <h3>Graphic Design</h3>
-                    <p>From thumbnails to logos, I sprinkle aesthetics like confetti. Your brand is safe with me (and maybe a drop shadow).</p>
+                    <p>From bold thumbnails to sleek logos, I craft designs that make your brand pop—drop shadows included.</p>
                 </div>
             </div>
             <div class="card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
@@ -184,7 +205,7 @@
                 </div>
                 <div class="info">
                     <h3>UI/UX Design</h3>
-                    <p>I make things not only look pretty, but feel intuitive. Because good design should feel like a warm hug, not a math problem.</p>
+                    <p>Design interfaces that feel natural, not forced—make it beautiful, make it effortless.</p>
                 </div>
             </div>
         </div>
@@ -193,87 +214,30 @@
     <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="title">
-            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Projects</h2>
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Tools</h2>
             <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Every project is a canvas — built with HTML, CSS, and JavaScript, and soon evolving with Python and the MERN stack. I create clean, responsive, and engaging web experiences that not only look great but are built to grow. This is just the beginning.</p>
             </div>
         <div class="content">
             <div class="card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400" onclick="window.location.href='Projects/project1/QR_code_generator.html';">
                 <div class="info">
-                    <h3>QR Code Generator</h3>
-                    <a class="btn" href="Projects/project1/QR_code_generator.html">Click over  <i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                <div class="info">
-                    <h3>Soon!</h3>
-                    </div>
+                    <h3>QR Code<br>Generator</h3>
                     <div class="bg_text">
-                        <i class="i" data-feather="aperture"></i>
+                    <i class="i" data-feather="aperture"></i>
                 </div>
             </div>
-            <!-- <div class="card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" onclick="window.location.href='myprojects.html';">
                 <div class="info">
-                    <h3>UI/UX Design</h3>
+                    <h3>Blogs</h3>
                 </div>
                 <div class="bg_text">
                     <i class="i" data-feather="aperture"></i>
                 </div>
-            </div> -->
+            </div>
         </div>
     </section>
-<!-- Work Section -->
-<!-- <section class="work" id="work">
-    <div class="title">
-        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Works</h2>
-    </div>
-    <div class="content">
-        <div class="carousel">
-            <button class="arrow left-arrow" data-aos="fade-right" data-aos-duration="1000">❮</button>
-            
-            <div class="carousel-items">
-                <div class="card active" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="card-img">
-                        <img src="Image/work4.png" alt="Work 1">
-                    </div>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="card-img">
-                        <img src="Image/work5.png" alt="Work 2">
-                    </div>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="card-img">
-                        <img src="Image/work6.jpg" alt="Work 3">
-                    </div>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="card-img">
-                        <img src="Image/work4.png" alt="Work 4">
-                    </div>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="card-img">
-                        <img src="Image/work5.png" alt="Work 5">
-                    </div>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="card-img">
-                        <img src="Image/work6.jpg" alt="Work 6">
-                    </div>
-                </div>
-            </div>
-            
-            <button class="arrow right-arrow" data-aos="fade-left" data-aos-duration="1000">❯</button>
-        </div>
-        
-        <div class="gallery-indicator" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-            <span class="current"></span> of <span class="total"></span>
-        </div>
-        
-        <a href="https://corona-the-project.netlify.app/" class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">Corona - Project -></a>
-    </div>
-</section> -->
-
+    
+    <!-- Contact section -->
     <section class="contact" id="contact">
         <div class="title reveal">
             <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Find Me?</h2>
@@ -282,140 +246,50 @@
           <div class="row">
             <div class="card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
               <div class="contact-icon" >
+                <div class="icon-card">
                 <i class="i" data-feather="map-pin"></i>
+                </div>
               </div>
               <div class="info">
                 <h3>Address</h3>
                 <span><a href="https://maps.app.goo.gl/BojkfZ1ketSzYADu9">Kathmandu, Nepal</a></span>
               </div>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-              <div class="contact-icon">
-                <i class="i" data-feather="phone-call"></i>
-              </div>
-              <div class="info">
-                <h3>Phone</h3>
-                <span>100💀</span>
-              </div>
-            </div>
             <div class="card" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
               <div class="contact-icon">
-                <i  class="i" data-feather="mail"></i>
-              </div>
+                <div class="icon-card">
+                <i class="i" data-feather="mail"></i>
+            </div>
+            </div>
               <div class="info">
                 <h3>Email Address</h3>
                 <span><a href="mailto:prachteek96@gmail.com">prachteek96@gmail.com</a></span>
               </div>
             </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="contact-icon">
+                <div class="icon-card">
+                <i class="i" data-feather="users"></i>
+              </div>
+              </div>
+              <div class="info">
+                <h3>Social Medias</h3>
+                <span><a href="#main">Here</a></span>
+              </div>
+            </div>
           </div>
-
-          <!-- <div class="row card" data-aos="fade" data-aos-duration="1000" data-aos-delay="550">
-            <form id="contactForm" class="contact-form reveal">
-              <h3>Send Message</h3>
-          
-              <div class="input-box">
-                <input type="text" id="name" placeholder="Name" required>
-              </div>
-          
-              <div class="input-box">
-                <input type="email" id="emailid" placeholder="Email" required>
-              </div>
-          
-              <div class="input-box">
-                <textarea id="messageid" rows="8" cols="80" placeholder="Message" required></textarea>
-              </div>
-          
-              <div class="input-box">
-                <input type="submit" class="send-btn" value="Send">
-              </div>
-            </form>
-          </div>           -->
         </div>
       </section>
       
-      <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <button onclick="topFunction()" class="scrollToTopBtn" id="scrollToTopBtn" title="Go to top" data-aos="zoom-in" data-aos-duration="100" data-aos-delay="300">
           <div class="btn_container">
-        <img id="imgarrow" src="Image/head-up-arrow.png" alt="Top">
+            <i class="i chev-up" data-feather="chevrons-up"></i>
         </button>
 
-      <footer class="footer">
+      <footer class="footer hero">
         <span class="footer-title">Owned and Managed by:</span>
         <p>&copy;<a href="/">pratik-chau</a></p>
+        <p script="document.getElementById('current-year').textContent = `| ${new Date().getFullYear()} |`;"></p>
       </footer>
     </body>
     </html>
-    
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="module">
-    AOS.init({
-        once: true,
-        offset: 120,
-        easing: 'ease-out-cubic',
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const width = window.innerWidth;
-
-        if (width <= 1040) {
-            document.querySelectorAll('.media-icons').forEach(el => {
-                el.removeAttribute('data-aos');
-            });
-        }
-    });
-
-    // Sticky header on scroll
-    window.addEventListener("scroll", function () {
-        const header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 100);
-    });
-
-    // Add scroll effect
-    window.addEventListener('scroll', function () {
-        const navbar = document.querySelector('.navbar');
-
-        function updateNavbarStyle() {
-            const navbar = document.querySelector('.navbar');
-            const isSmallScreen = window.matchMedia('(max-width: 1040px)').matches;
-
-            if (!isSmallScreen) {
-                if (window.scrollY > 50) {
-                    navbar.style.padding = '10px 20px';
-                    navbar.style.background = 'rgba(6, 114, 202, 1)';
-                } else {
-                    navbar.style.padding = '16px 20px';
-                    navbar.style.background = 'rgba(6, 114, 202, 0)';
-                }
-            } else {
-                navbar.style.padding = '16px 20px';
-                navbar.style.background = '';
-            }
-        }
-
-        // Run on scroll and resize
-        window.addEventListener('scroll', updateNavbarStyle);
-        window.addEventListener('resize', updateNavbarStyle);
-        document.addEventListener('DOMContentLoaded', updateNavbarStyle);
-    });
-
-    // const scrollBtn = document.querySelector(".scroll-btn");
-    // if (scrollBtn) {
-    //     window.addEventListener("scroll", function () {
-    //         scrollBtn.classList.toggle("active");
-    //     });
-    // }
-
-    // const menuBtn = document.querySelector(".menu-btn");
-    // const navigation = document.querySelector(".navigation");
-    // menuBtn.addEventListener("click", () => {
-    //     menuBtn.classList.toggle("active");
-    //     navigation.classList.toggle("active");
-    // });
-
-    // const navigationItems = document.querySelectorAll(".navigation a");
-    // navigationItems.forEach((navigationItem) => {
-    //     navigationItem.addEventListener("click", () => {
-    //         menuBtn.classList.remove("active");
-    //         navigation.classList.remove("active");
-    //     });
-    // });
-</script>

@@ -1,25 +1,37 @@
-// Initialize Feather icons
-document.addEventListener('DOMContentLoaded', () => {
+
   feather.replace();
-});
+  lucide.createIcons();
 
-// Goto Top Button
-const mybutton = document.getElementById("myBtn");
+  const mybutton = document.getElementById("scrollToTopBtn");
 
-// Show or hide button based on scroll position
-window.onscroll = function() {
-  scrollFunction();
-};
+  if (mybutton) {
+    mybutton.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  window.onscroll = scrollFunction;
+  scrollFunction(); // Run initially in case page is already scrolled
+
+  AOS.init({
+    once: true,
+    offset: 120,
+    easing: 'ease-out-cubic',
+  });
 
 function scrollFunction() {
-  if (document.documentElement.scrollTop > 500) {
-    mybutton.style.display = "block";
+  const navbar = document.querySelector('.navbar');
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    navbar.classList.add('on_scroll');
+    navbar.classList.remove('on_top');
+    scrollToTopBtn.classList.add("show");
+    scrollToTopBtn.classList.remove("hide");
   } else {
-    mybutton.style.display = "none";
+    navbar.classList.add('on_top');
+    navbar.classList.remove('on_scroll');
+    scrollToTopBtn.classList.add("hide");
+    scrollToTopBtn.classList.remove("show");
   }
 }
-
-// Smooth scroll to top when the button is clicked
-mybutton.addEventListener("click", function() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
