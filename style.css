@@ -56,7 +56,7 @@ body{
     width: 100%;
     height: auto;
     overflow-x: hidden;
-    background-color: var(--partwhite);
+    background-color: var(--white);
     color: var(--boldblack);
 }
 
@@ -414,8 +414,8 @@ section{
 }
 
 .about .content .col-left .img-card:hover{
-    box-shadow: -5px 6px 15px 3px var(--boxshadow);
-
+    box-shadow: -1px 8px 17px var(--boxshadow);
+    filter: brightness(1.5) contrast(1);
 }
 .about .content .col-right .content-title{
     font-size: 2em;
@@ -622,7 +622,7 @@ section{
 .services .content .card:hover{
     background-color: var(--royalblue);
     color: var(--partwhite);
-    box-shadow: -12px 15px 20px 6px var(--boxshadow);
+    box-shadow: -1px 8px 17px var(--boxshadow);
 }
 
 .services .content .card:hover .icon-card{
@@ -729,7 +729,7 @@ svg {
     background: var(--sec_bg1);
     margin: 0 auto 30px auto;
 }
-.tools .content,.project_btn {
+.tools .content{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -757,6 +757,7 @@ svg {
     min-height: 20rem;
     z-index: 1;
     position: relative;
+    border: 1px solid var(--royalblue);
     transition: all 0.3s ease-in-out;
 }
 .tools .content .card .bg_text{
@@ -788,7 +789,7 @@ svg {
 
 .tools .content .card .info h3 {
     text-align: center;
-    color: var(--boldblack);
+    color: var(--black);
     font-size: 1.5rem;
     font-weight: 700;
     margin: 10px;
@@ -799,11 +800,12 @@ svg {
 .tools .content .card:hover {
     /* background-image: linear-gradient(328deg, rgba(29, 29, 29, 0.05) 0%, rgba(29, 29, 29, 0.05) 25%,rgba(226, 226, 226, 0.05) 25%, rgba(226, 226, 226, 0.05) 50%,rgba(21, 21, 21, 0.05) 50%, rgba(21, 21, 21, 0.05) 75%,rgba(216, 216, 216, 0.05) 75%, rgba(216, 216, 216, 0.05) 100%),linear-gradient(172deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 25%,rgba(108, 108, 108, 0.05) 25%, rgba(108, 108, 108, 0.05) 50%,rgba(21, 21, 21, 0.05) 50%, rgba(21, 21, 21, 0.05) 75%,rgba(236, 236, 236, 0.05) 75%, rgba(236, 236, 236, 0.05) 100%),linear-gradient(207deg, rgba(153, 153, 153, 0.05) 0%, rgba(153, 153, 153, 0.05) 25%,rgba(83, 83, 83, 0.05) 25%, rgba(83, 83, 83, 0.05) 50%,rgba(5, 5, 5, 0.05) 50%, rgba(5, 5, 5, 0.05) 75%,rgba(82, 82, 82, 0.05) 75%, rgba(82, 82, 82, 0.05) 100%),linear-gradient(297deg, rgba(26, 26, 26, 0.05) 0%, rgba(26, 26, 26, 0.05) 25%,rgba(223, 223, 223, 0.05) 25%, rgba(223, 223, 223, 0.05) 50%,rgba(232, 232, 232, 0.05) 50%, rgba(232, 232, 232, 0.05) 75%,rgba(153, 153, 153, 0.05) 75%, rgba(153, 153, 153, 0.05) 100%),linear-gradient(204deg, rgba(120, 120, 120, 0.05) 0%, rgba(120, 120, 120, 0.05) 25%,rgba(191, 191, 191, 0.05) 25%, rgba(191, 191, 191, 0.05) 50%,rgba(246, 246, 246, 0.05) 50%, rgba(246, 246, 246, 0.05) 75%,rgba(123, 123, 123, 0.05) 75%, rgba(123, 123, 123, 0.05) 100%),linear-gradient(90deg, rgb(32,234,255),rgb(37,116,255)); */
     color: var(--partwhite);
-    box-shadow: 0 5px 25px var(--boxshadow);
+    box-shadow: -1px 8px 17px var(--boxshadow);
 }
 
 .tools .content .card:hover .info h3 {
     transform: translateY(-5px);
+    color: var(--boldblack);
 }
 .btn {
     display: inline-block;
@@ -854,7 +856,7 @@ svg {
     border: 1px solid var(--royalblue);
   }
   .contact .content .row .card:hover{
-    box-shadow: 0 5px 25px var(--boxshadow);
+    box-shadow: -1px 8px 17px var(--boxshadow);
   }
   .i{
     transform: scale(1.5);
@@ -1098,6 +1100,21 @@ svg {
     }
     .skills .content .col-right{
         margin-top: 40px;
+    }
+    .skills .content .col-right .bar .lightroom::before{
+        background-color: var(--royalblue);
+    }
+
+    .skills .content .col-right .bar .figma::before{
+        background-color: var(--royalblue);
+    }
+
+    .skills .content .col-right .bar .framer::before{
+        background-color: var(--royalblue);
+    }
+
+    .skills .content .col-right .bar .illustrator::before{
+        background-color: var(--royalblue);
     }
     .contact-form{
         padding: 35px 40px;
