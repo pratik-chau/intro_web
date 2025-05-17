@@ -13,7 +13,6 @@
     <script src="script.js" type="module"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="themeToggle.js"></script>
 </head>
 <body>
     <nav class="navbar" data-aos="fade-down" data-aos-duration="800">
@@ -24,12 +23,13 @@
                 <ul class="navbar-links">
                     <li><a href="#main" title="Home"  data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="100"><i class="fas fa-home"></i></a></li>
                     <li><a href="#about" title="About" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="200"><i class="fas fa-user"></i></a></li>
-                    <li><a href="myprojects.html" title="Blog" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="300"><i class="fas fa-blog"></i></a></li>
                     <li><a href="#skills" title="Skills" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="400"><i class="fas fa-cog"></i></a></li>
-                    <li><a href="#services" title="Projects" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="500"><i class="fas fa-user-cog"></i></a></li>
-                    <li><a href="#projects" title="Projects" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="600"><i class="fas fa-code"></i></a></li>
+                    <li><a href="#services" title="Services" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="500"><i class="fas fa-user-cog"></i></a></li>
+                    <li><a href="#tools" title="" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="600"><i class="fas fa-code"></i></a></li>
                     <li><a href="#contact" title="Contact" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="700"><i class="fas fa-envelope"></i></a></li>
-                    <li><a title="Theme Toggle" onclick="toggleTheme()" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="800"><i class="fas fa-moon"></i></a></li>
+                    <li><div class="custom-dropdown"><div class="dropdown-selected"><i data-feather="sun"></i></div>
+                        <ul class="dropdown-options"><li data-value="light" class="option selected"><i data-feather="sun"></i>Light</li><li data-value="dark" class="option"><i data-feather="moon"></i>Dark</li></ul></div>
+                    </li>
                 </ul>
             </div>
     </nav>
@@ -212,7 +212,7 @@
     </section>
     
     <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <section class="tools" id="tools">
         <div class="title">
             <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Tools</h2>
             <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Every project is a canvas — built with HTML, CSS, and JavaScript, and soon evolving with Python and the MERN stack. I create clean, responsive, and engaging web experiences that not only look great but are built to grow. This is just the beginning.</p>
@@ -293,14 +293,45 @@
       </footer>
     </body>
     </html>
-    <script>
+<script>
+  // Set initial theme
   const currentTheme = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', currentTheme);
-  
-  function toggleTheme() {
-    const current = document.documentElement.getAttribute('data-theme');
-    const newTheme = current === 'light' ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
+  updateDropdown(currentTheme);
+
+  // Toggle dropdown visibility
+  const selected = document.querySelector('.dropdown-selected');
+  const optionsContainer = document.querySelector('.dropdown-options');
+  selected.addEventListener('click', () => {
+    optionsContainer.classList.toggle('show');
+  });
+
+  // Handle option selection
+  const options = document.querySelectorAll('.option');
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      const newTheme = option.getAttribute('data-value');
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateDropdown(newTheme);
+      optionsContainer.classList.remove('show');
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.custom-dropdown')) {
+      optionsContainer.classList.remove('show');
+    }
+  });
+
+  function updateDropdown(theme) {
+    const selected = document.querySelector('.dropdown-selected');
+    const options = document.querySelectorAll('.option');
+    selected.innerHTML = `<i data-feather="${theme === 'light' ? 'sun' : 'moon'}"></i>`;
+    options.forEach(opt => {
+      opt.classList.toggle('selected', opt.getAttribute('data-value') === theme);
+    });
+    feather.replace(); 
   }
 </script>
