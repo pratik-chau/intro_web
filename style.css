@@ -222,7 +222,7 @@ section{
     height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url(Image/bg.png);
+    background-image: url(Image/bg.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -404,15 +404,19 @@ section{
     position: relative;
     width: 100%;
     background-color: #224439d0;
-    background: url(Image/img1.jpg);
+    background: url(Image/img1.webp);
     background-size: 100%;
     background-position-y: 90%;
     background-repeat: no-repeat;
     min-height: 440px;
     border-radius: 20px;
-    box-shadow: -5px 6px 15px 3px var(--boxshadow);
+    transition: all 0.3s ease-in-out;
 }
 
+.about .content .col-left .img-card:hover{
+    box-shadow: -5px 6px 15px 3px var(--boxshadow);
+
+}
 .about .content .col-right .content-title{
     font-size: 2em;
     font-weight: 800;
@@ -591,7 +595,7 @@ section{
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 0 5px 25px var(--boxshadow);
+    border: 1px solid var(--royalblue);
     transition: 0.3s linear;
 }
 
@@ -749,11 +753,11 @@ svg {
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 0 5px 25px var(--boxshadow);
     transition: 0.3s linear;
     min-height: 20rem;
     z-index: 1;
     position: relative;
+    transition: all 0.3s ease-in-out;
 }
 .tools .content .card .bg_text{
     position: absolute;
@@ -795,6 +799,7 @@ svg {
 .tools .content .card:hover {
     /* background-image: linear-gradient(328deg, rgba(29, 29, 29, 0.05) 0%, rgba(29, 29, 29, 0.05) 25%,rgba(226, 226, 226, 0.05) 25%, rgba(226, 226, 226, 0.05) 50%,rgba(21, 21, 21, 0.05) 50%, rgba(21, 21, 21, 0.05) 75%,rgba(216, 216, 216, 0.05) 75%, rgba(216, 216, 216, 0.05) 100%),linear-gradient(172deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 25%,rgba(108, 108, 108, 0.05) 25%, rgba(108, 108, 108, 0.05) 50%,rgba(21, 21, 21, 0.05) 50%, rgba(21, 21, 21, 0.05) 75%,rgba(236, 236, 236, 0.05) 75%, rgba(236, 236, 236, 0.05) 100%),linear-gradient(207deg, rgba(153, 153, 153, 0.05) 0%, rgba(153, 153, 153, 0.05) 25%,rgba(83, 83, 83, 0.05) 25%, rgba(83, 83, 83, 0.05) 50%,rgba(5, 5, 5, 0.05) 50%, rgba(5, 5, 5, 0.05) 75%,rgba(82, 82, 82, 0.05) 75%, rgba(82, 82, 82, 0.05) 100%),linear-gradient(297deg, rgba(26, 26, 26, 0.05) 0%, rgba(26, 26, 26, 0.05) 25%,rgba(223, 223, 223, 0.05) 25%, rgba(223, 223, 223, 0.05) 50%,rgba(232, 232, 232, 0.05) 50%, rgba(232, 232, 232, 0.05) 75%,rgba(153, 153, 153, 0.05) 75%, rgba(153, 153, 153, 0.05) 100%),linear-gradient(204deg, rgba(120, 120, 120, 0.05) 0%, rgba(120, 120, 120, 0.05) 25%,rgba(191, 191, 191, 0.05) 25%, rgba(191, 191, 191, 0.05) 50%,rgba(246, 246, 246, 0.05) 50%, rgba(246, 246, 246, 0.05) 75%,rgba(123, 123, 123, 0.05) 75%, rgba(123, 123, 123, 0.05) 100%),linear-gradient(90deg, rgb(32,234,255),rgb(37,116,255)); */
     color: var(--partwhite);
+    box-shadow: 0 5px 25px var(--boxshadow);
 }
 
 .tools .content .card:hover .info h3 {
@@ -845,10 +850,12 @@ svg {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 5px 25px var(--boxshadow);
     border-radius: 10px;
+    border: 1px solid var(--royalblue);
   }
-  
+  .contact .content .row .card:hover{
+    box-shadow: 0 5px 25px var(--boxshadow);
+  }
   .i{
     transform: scale(1.5);
   
@@ -900,7 +907,6 @@ svg {
     border-radius: 100%;
     z-index: 1;
     transition: all 0.3s ease-in-out;
-    filter: drop-shadow(0px 5px 10px white);
 }
 #scrollToTopBtn.show{
     opacity: 1;
@@ -909,13 +915,6 @@ svg {
 #scrollToTopBtn.hide{
     opacity: 0;
     visibility: hidden;
-}
-
-#imgarrow {
-    height: 32px;
-    transform: scale(1.5);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
 }
 
 .btn_container{
@@ -1035,7 +1034,7 @@ svg {
     }
 
     .main{
-        background-image: url(Image/bkgrnd.png);
+        background-image: url(Image/bkgrnd.webp);
         background-attachment: scroll;
     }
     .main .content{
@@ -1071,12 +1070,14 @@ svg {
         position: relative;
     }
     .about .content .col-left .img-card{
-        background: url(Image/img1.jpg);
+        background: url(Image/img1.webp);
         background-position-y: 100%;
         background-size: cover;
         min-height: 400px;
         border-radius: 100%;
-        box-shadow: 2px 16px 16px rgba(0, 0, 0, 0.7);
+    }
+    .about .content .col-left .img-card:hover{
+        box-shadow: none;
     }
     .about .content .col-right{
         margin-top: 40px;
