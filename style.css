@@ -332,10 +332,10 @@ section{
     color: white;
     font-size: 25px;
     margin-right: 30px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 .fab:hover{
-    transform: scale(1.2);
+    color: var(--accent-color);
 }
 
 /* About */
