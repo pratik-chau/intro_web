@@ -234,7 +234,7 @@ section{
     background-attachment: fixed;
 }
 [data-theme="dark"] .main{
-    background-image: url(Image/bg_dark.png);
+    background-image: url(Image/bg_dark.webp);
     background-attachment: scroll;
 }
 .main .content{
